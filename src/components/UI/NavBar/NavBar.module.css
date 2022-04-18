@@ -6,6 +6,14 @@
   gap: 2rem;
   background-color: var(--COLOR-bg);
   color: var(--COLOR-text);
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}
+
+.nav.transparent{
+  background-color: transparent;
 }
 
 .nav-brand {
