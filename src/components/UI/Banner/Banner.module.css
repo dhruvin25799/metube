@@ -1,0 +1,40 @@
+.banner {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  height: 95vh;
+  justify-content: center;
+  padding-left: 2rem;
+  gap: 2rem;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 95vh;
+  width: 99vw;
+}
+.banner-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.banner-text {
+  display: flex;
+  flex-flow: column;
+  gap: 7px;
+  z-index: 1;
+}
+
+.banner-text h1 {
+  font-size: 5rem;
+}
+.banner-cta {
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+  z-index: 1;
+}

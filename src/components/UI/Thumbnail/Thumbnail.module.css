@@ -1,0 +1,11 @@
+.thumbnail{
+    cursor: pointer;
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.thumbnail:hover{
+    height: 160px;
+    transition: 0.3s ease;
+}
