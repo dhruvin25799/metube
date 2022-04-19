@@ -7,9 +7,10 @@
   background-color: var(--COLOR-bg);
   color: var(--COLOR-text);
   position: fixed;
-  z-index: 2;
+  z-index: 6;
   left: 0;
   right: 0;
+  transition: 1s ease;
 }
 
 .nav.transparent{

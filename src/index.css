@@ -30,6 +30,7 @@ body {
   --COLOR-brand:red;
   --COLOR-bg: black;
   --COLOR-secondary-bg: #2f2f2f; /* 181818 */
+  --COLOR-modal-bg: #181818;
   --COLOR-text: white;
   --COLOR-primary-btn-bg: white;
   --COLOR-primary-btn-text: black;

@@ -1,11 +1,33 @@
+.thumbnail-container{
+    width: 250px;
+    position: relative;
+}
+
 .thumbnail{
     cursor: pointer;
     width: 250px;
-    height: 150px;
     object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.thumbnail-title{
+    display: none;
+    background-color: var(--COLOR-secondary-bg);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
 }
 
 .thumbnail:hover{
     height: 160px;
-    transition: 0.3s ease;
 }
+
+.thumbnail:hover + .thumbnail-title{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    z-index: 4;
+}
+
