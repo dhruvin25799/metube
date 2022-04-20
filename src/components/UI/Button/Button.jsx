@@ -4,6 +4,7 @@ export const Button = (props) => {
     <button
       className={props.primary ? styles["primary"] : styles["secondary"]}
       onClick={props.onClick}
+      disabled={props.disabled}
     >
       {props.children}
     </button>

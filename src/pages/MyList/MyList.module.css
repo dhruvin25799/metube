@@ -1,0 +1,17 @@
+.list-main {
+  padding: 2rem;
+}
+
+.list-container {
+  margin: 5rem 0;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  min-height: 100vh;
+}

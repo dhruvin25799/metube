@@ -13,7 +13,7 @@ export const Carousel = (props) => {
       const { scrollLeft, clientWidth } = carouselRef.current;
       const scrollTo =
         arrow === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-      carouselRef.current.scrollTo({ left: scrollTo, behavior: "smooth"});
+      carouselRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
   return (

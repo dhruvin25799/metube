@@ -27,7 +27,7 @@ body {
 }
 
 [data-theme="dark"] {
-  --COLOR-brand:red;
+  --COLOR-brand: red;
   --COLOR-bg: black;
   --COLOR-secondary-bg: #2f2f2f; /* 181818 */
   --COLOR-modal-bg: #181818;
@@ -38,4 +38,5 @@ body {
   --COLOR-secondary-btn-text: white;
   --COLOR-primary-btn-bg-hover: rgba(255, 255, 255, 0.75);
   --COLOR-secondary-btn-bg-hover: rgba(109, 109, 110, 0.4);
+  --COLOR-bg-transparent: rgb(0, 0, 0, 0.5);
 }

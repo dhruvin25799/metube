@@ -12,7 +12,10 @@ export const Footer = () => {
     <>
       <footer className={styles["footer"]}>
         <div className={styles["footer-section"]}>
-          <div className={styles["nav-brand"]}><FontAwesomeIcon icon={faPhotoFilm}/>MeTube</div>
+          <div className={styles["nav-brand"]}>
+            <FontAwesomeIcon icon={faPhotoFilm} />
+            MeTube
+          </div>
           <p>
             MeTube is a video library that holds all your favourite videos. Plus
             gives you an option to have a watchlist.

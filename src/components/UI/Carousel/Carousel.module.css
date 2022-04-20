@@ -45,21 +45,21 @@
   z-index: 4;
 }
 
-.left-arrow.hidden{
-    display: none;
+.left-arrow.hidden {
+  display: none;
 }
 
-.carousel-row:hover .left-arrow{
-    opacity:0.3;
+.carousel-row:hover .left-arrow {
+  opacity: 0.3;
 }
-.carousel-row:hover .right-arrow{
-    opacity: 0.3;
+.carousel-row:hover .right-arrow {
+  opacity: 0.3;
 }
-.carousel-row .right-arrow:hover{
-    cursor: pointer;
-    opacity: 0.7;
+.carousel-row .right-arrow:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
-.carousel-row .left-arrow:hover{
-    cursor: pointer;
-    opacity: 0.7;
+.carousel-row .left-arrow:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
