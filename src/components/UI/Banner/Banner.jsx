@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPlayer from "react-player";
 import { Button } from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";

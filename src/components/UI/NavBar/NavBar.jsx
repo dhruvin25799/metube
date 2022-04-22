@@ -41,7 +41,7 @@ export const NavBar = () => {
             <NavLink to="/mylist">My list</NavLink>
           </li>
           <li>
-            <NavLink to="contact">Contact Us</NavLink>
+            <NavLink to="/history">History</NavLink>
           </li>
         </menu>
         <menu className={styles["nav-cta"]}>

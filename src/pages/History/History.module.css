@@ -1,8 +1,8 @@
-.list-main {
+.history-main {
   padding: 2rem;
 }
 
-.list-container {
+.history-container {
   margin: 5rem 0;
   display: flex;
   flex-flow: column;
@@ -10,11 +10,12 @@
   min-height: 100vh;
 }
 
-.error-text{
-  padding: 2rem;
+.history-header{
+    display: flex;
+    justify-content: space-between;
 }
 
-.list-grid {
+.history-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;

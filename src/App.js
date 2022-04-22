@@ -11,6 +11,7 @@ import { Login } from "./pages/Login/Login";
 import { SignUp } from "./pages/SignUp/SignUp";
 import { MyList } from "./pages/MyList/MyList";
 import { ToastContainer } from "react-toastify";
+import { History } from "./pages/History/History";
 
 function App() {
   const { isDark } = useTheme();
@@ -38,6 +39,14 @@ function App() {
             element={
               <RequiresAuth>
                 <MyList />
+              </RequiresAuth>
+            }
+          />
+          <Route
+            path="/history"
+            element={
+              <RequiresAuth>
+                <History />
               </RequiresAuth>
             }
           />

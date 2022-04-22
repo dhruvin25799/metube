@@ -9,10 +9,12 @@ import {
   registerInputReducer,
   initialRegisterInputState,
 } from "../../reducers/registerInputReducer";
+import { useUserData } from "../../context/userdata-context";
 
 export const SignUp = () => {
   const navigate = useNavigate();
   const { authStateDispatch } = useAuth();
+  const { userDataDispatch } = useUserData();
   const [registerInputState, registerInputStateDispatch] = useReducer(
     registerInputReducer,
     initialRegisterInputState
@@ -22,6 +24,7 @@ export const SignUp = () => {
     try {
       const data = await registerAPICall(registerInputState);
       authStateDispatch({ type: "LOGIN", payload: data.encodedToken });
+      userDataDispatch({ type: "LOGIN", payload: data.createdUser });
       navigate("/", { replace: true });
     } catch (err) {
       toast.error(err.message, {

@@ -6,6 +6,12 @@ export const userDataReducer = (state, action) => {
     case "LIST": {
       return { ...state, watchlater: [...action.payload] };
     }
+    case "LIKE": {
+      return {...state, likes: [...action.payload]}
+    }
+    case "HISTORY": {
+      return{...state, history: [...action.payload]}
+    }
     case "LOGOUT":{
         return initialUserData
     }
