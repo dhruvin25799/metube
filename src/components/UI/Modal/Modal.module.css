@@ -14,6 +14,7 @@
   padding-bottom: 1rem;
   opacity: 0;
   transition: all 0.5s ease;
+  z-index: 100;
 }
 
 .modal.show {
@@ -43,6 +44,7 @@
   display: flex;
   flex-flow: column;
   gap: 10px;
+  color: var(--COLOR-modal-text);
 }
 
 .modal-text h1 {
@@ -57,14 +59,21 @@
   align-items: center;
 }
 
-.likes-container{
+.likes-container {
   display: flex;
   flex-flow: row;
   gap: 10px;
 }
 
-.likes-container button{
+.likes-container button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  color: var(--COLOR-modal-text);
+}
+
+@media (max-width: 480px) {
+  .modal-text h1 {
+    font-size: 1.5rem;
+  }
 }

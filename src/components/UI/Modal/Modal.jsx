@@ -176,6 +176,7 @@ export const Modal = () => {
             height="350px"
             controls={true}
             onStart={!isAlreadyWatched && addtoHistoryHandler}
+            className={styles["video-player"]}
           />
         </div>
         <div className={styles["modal-text"]}>

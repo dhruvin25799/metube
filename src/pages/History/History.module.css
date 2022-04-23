@@ -10,13 +10,26 @@
   min-height: 100vh;
 }
 
-.history-header{
-    display: flex;
-    justify-content: space-between;
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .history-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .history-grid {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .history-header h1{
+    font-size: 1.2rem;
+  }
 }

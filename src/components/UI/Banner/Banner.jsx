@@ -51,6 +51,7 @@ export const Banner = (props) => {
           <img
             src={`https://img.youtube.com/vi/${props.data._id}/maxresdefault.jpg`}
             alt=""
+            className={styles["resp-img"]}
           />
         </div>
         <div className={styles["banner-text"]}>

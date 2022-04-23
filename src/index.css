@@ -15,15 +15,20 @@ body {
 }
 
 :root {
-  --COLOR-bg: rgb(95, 94, 246);
-  --COLOR-secondary-bg: white;
-  --COLOR-text: white;
-  --COLOR-secondary-text: black;
-  --COLOR-text-bg: white;
-  --COLOR-input-border: rgb(30, 46, 58);
-  --COLOR-input-bg: #f1f2f2;
-  --COLOR-white: white;
-  --COLOR-black: black;
+  --COLOR-brand: red;
+  --COLOR-bg:   #DEE4E7;
+  --COLOR-secondary-bg: #F0FFF0; /* 181818 */
+  --COLOR-modal-bg: black	;
+  --COLOR-text: black;
+  --COLOR-primary-btn-bg: red;
+  --COLOR-primary-btn-text: black;
+  --COLOR-secondary-btn-bg: rgba(255, 255, 255, 0.847);
+  --COLOR-secondary-btn-text: black;
+  --COLOR-primary-btn-bg-hover: rgba(247, 6, 6, 0.75);
+  --COLOR-secondary-btn-bg-hover: rgba(109, 109, 110, 0.7);
+  --COLOR-bg-transparent: rgba(0, 0, 0, 0.08);
+  --COLOR-banner-text: white;
+  --COLOR-modal-text: white;
 }
 
 [data-theme="dark"] {
@@ -32,11 +37,13 @@ body {
   --COLOR-secondary-bg: #2f2f2f; /* 181818 */
   --COLOR-modal-bg: #181818;
   --COLOR-text: white;
-  --COLOR-primary-btn-bg: white;
+  --COLOR-primary-btn-bg: red;
   --COLOR-primary-btn-text: black;
   --COLOR-secondary-btn-bg: rgba(109, 109, 110, 0.7);
   --COLOR-secondary-btn-text: white;
-  --COLOR-primary-btn-bg-hover: rgba(255, 255, 255, 0.75);
+  --COLOR-primary-btn-bg-hover: rgba(247, 6, 6, 0.75);
   --COLOR-secondary-btn-bg-hover: rgba(109, 109, 110, 0.4);
   --COLOR-bg-transparent: rgb(0, 0, 0, 0.5);
+  --COLOR-banner-text: white;
+  --COLOR-modal-text: white;
 }

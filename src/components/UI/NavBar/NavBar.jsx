@@ -1,15 +1,24 @@
 import styles from "./NavBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhotoFilm,
+  faHamburger,
+  faPizzaSlice,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "../Button/Button";
 import { useAuth } from "../../../context/auth-context";
 import { useUserData } from "../../../context/userdata-context";
+import { useTheme } from "../../../context/theme-context";
 export const NavBar = () => {
+  const { isDark, setIsDark } = useTheme();
   const { authState, authStateDispatch } = useAuth();
   const { userDataDispatch } = useUserData();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [toggle, setToggle] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -27,13 +36,39 @@ export const NavBar = () => {
   return (
     <>
       <nav
-        className={`${styles["nav"]} ${!isScrolled && styles["transparent"]}`}
+        className={`${styles["nav"]} ${!isScrolled && styles["transparent"]} ${
+          toggle && styles["display"]
+        }`}
       >
-        <Link to="/" className={styles["nav-brand"]}>
-          <FontAwesomeIcon icon={faPhotoFilm} size="2x" />
-          MeTube
-        </Link>
-        <menu className={styles["nav-links"]}>
+        <div
+          className={`${styles["nav-brand"]} ${toggle && styles["display"]}`}
+        >
+          <Link to="/" className={`${styles["nav-brand"]}`}>
+            <FontAwesomeIcon icon={faPhotoFilm} size="2x" />
+            MeTube
+          </Link>
+          {toggle && (
+            <FontAwesomeIcon
+              className={styles["nav-pizza"]}
+              icon={faPizzaSlice}
+              size="2x"
+              onClick={() => setToggle(false)}
+            />
+          )}
+        </div>
+        {!toggle && (
+          <div className={styles["nav-hamburger"]}>
+            <FontAwesomeIcon
+              icon={faHamburger}
+              size="2x"
+              onClick={() => setToggle((prevValue) => !prevValue)}
+            />
+          </div>
+        )}
+
+        <menu
+          className={`${styles["nav-links"]} ${toggle && styles["display"]}`}
+        >
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
@@ -44,7 +79,14 @@ export const NavBar = () => {
             <NavLink to="/history">History</NavLink>
           </li>
         </menu>
-        <menu className={styles["nav-cta"]}>
+        <menu className={`${styles["nav-cta"]} ${toggle && styles["display"]}`}>
+          <li>
+            <FontAwesomeIcon
+              icon={isDark ? faSun : faMoon}
+              size="2x"
+              onClick={() => setIsDark(!isDark)}
+            />
+          </li>
           <li>
             {authState.isLoggedIn ? (
               <Button
