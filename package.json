@@ -20,6 +20,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^8.2.0",
+    "react-youtube": "^8.2.1",
     "uuid": "^8.3.2"
   },
   "scripts": {

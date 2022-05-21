@@ -1,0 +1,79 @@
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 67%;
+  height: 80%;
+  background-color: var(--COLOR-modal-bg);
+  overflow-y: scroll;
+  z-index: 3;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+.modal.show {
+  opacity: 1;
+}
+
+.modal-close-btn {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15px;
+  right: 20px;
+  background-color: var(--COLOR-bg);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-close-btn:hover {
+  color: var(--COLOR-brand);
+}
+
+.modal-text {
+  padding-left: 2rem;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  color: var(--COLOR-modal-text);
+}
+
+.modal-text h1 {
+  font-size: 3rem;
+}
+
+.modal-cta {
+  padding-left: 2rem;
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.likes-container {
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+}
+
+.likes-container button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: var(--COLOR-modal-text);
+}
+
+@media (max-width: 480px) {
+  .modal-text h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -2,9 +2,10 @@
   display: flex;
   flex-flow: column;
   position: relative;
-  height: 95vh;
+  height: 100vh;
   justify-content: center;
   padding-left: 2rem;
+  padding-right: 2rem;
   gap: 2rem;
 }
 
@@ -13,8 +14,8 @@
   top: 0;
   left: 0;
   z-index: 0;
-  height: 95vh;
-  width: 99vw;
+  height: 100vh;
+  width: 100vw;
 }
 .banner-img img {
   object-fit: cover;
@@ -27,6 +28,7 @@
   flex-flow: column;
   gap: 7px;
   z-index: 1;
+  color: var(--COLOR-banner-text);
 }
 
 .banner-text h1 {
@@ -37,4 +39,26 @@
   flex-flow: row;
   gap: 1rem;
   z-index: 1;
+}
+
+.resp-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 50vh;
+  }
+  .banner-text h1 {
+    padding-top: 5rem;
+    font-size: 1.5rem;
+  }
+  .banner-text p {
+    display: none;
+  }
+  .banner-img {
+    width: 100%;
+    height: 50vh;
+  }
 }

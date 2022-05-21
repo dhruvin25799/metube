@@ -16,6 +16,15 @@ button {
   font-size: 1rem;
 }
 
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
 .primary {
   background-color: var(--COLOR-primary-btn-bg);
   color: var(--COLOR-primary-btn-text);

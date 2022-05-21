@@ -1,0 +1,30 @@
+.list-main {
+  padding: 2rem;
+}
+
+.list-container {
+  margin: 5rem 0;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+.error-text{
+  padding: 2rem;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .list-grid{
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}

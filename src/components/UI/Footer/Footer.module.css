@@ -21,6 +21,11 @@
   list-style: none;
 }
 
+.footer-section ul li a{
+  color: var(--COLOR-text);
+  text-decoration: none;
+}
+
 .footer-section .social-links {
   display: flex;
   flex-flow: row;
@@ -38,4 +43,14 @@
   gap: 10px;
   font-size: 1.5rem;
   letter-spacing: 4px;
+}
+
+.heart-icon{
+  color: var(--COLOR-brand);
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-flow: column;
+  }
 }

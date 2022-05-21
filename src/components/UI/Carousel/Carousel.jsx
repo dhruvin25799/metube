@@ -13,13 +13,13 @@ export const Carousel = (props) => {
       const { scrollLeft, clientWidth } = carouselRef.current;
       const scrollTo =
         arrow === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-      carouselRef.current.scrollTo({ left: scrollTo, behavior: "smooth"});
+      carouselRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
   return (
     <>
       <section className={styles["carousel-container"]}>
-        <h1>Title</h1>
+        <h1>{props.data.title}</h1>
         <div className={styles["carousel"]}>
           <div className={styles["carousel-row"]} ref={carouselRef}>
             <div
@@ -36,14 +36,9 @@ export const Carousel = (props) => {
             >
               <FontAwesomeIcon icon={faAngleRight} size="2x" />
             </div>
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
-            <Thumbnail src="https://img.youtube.com/vi/mqqft2x_Aa4/0.jpg" />
+            {props.data.movies.map((item) => (
+              <Thumbnail key={item._id} data={item} />
+            ))}
           </div>
         </div>
       </section>
