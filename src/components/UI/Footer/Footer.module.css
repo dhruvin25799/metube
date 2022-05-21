@@ -1,0 +1,41 @@
+.footer {
+  padding: 1rem 2rem;
+  background-color: var(--COLOR-bg);
+  display: flex;
+  flex-flow: row;
+  color: var(--COLOR-text);
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 25%;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.footer-section ul {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer-section .social-links {
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+  list-style: none;
+}
+
+.nav-brand {
+  color: var(--COLOR-brand);
+  font-weight: 900;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
