@@ -6,6 +6,7 @@ import {
   faTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 export const Footer = () => {
   return (
@@ -24,19 +25,29 @@ export const Footer = () => {
         <div className={styles["footer-section"]}>
           <h4>Useful Links</h4>
           <ul>
-            <li>Home</li>
-            <li>Login</li>
-            <li>Contact Us</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="mylist">My List</Link>
+            </li>
+            <li>
+              <Link to="contact">Contact Us</Link>
+            </li>
           </ul>
         </div>
         <div className={styles["footer-section"]}>
           <h4>Social Media</h4>
           <ul className={styles["social-links"]}>
             <li>
-              <FontAwesomeIcon icon={faGithub} />
+              <a href="https://github.com/dhruvin25799">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={faLinkedin} />
+              <a href="https://www.linkedin.com/in/dhruvin-mehta-21a8a7190/">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
             </li>
             <li>
               <FontAwesomeIcon icon={faTwitter} />
@@ -49,7 +60,7 @@ export const Footer = () => {
         <div className={styles["footer-section"]}>
           <h4>Our team</h4>
           <p>
-            Made with <FontAwesomeIcon icon={faHeart} /> by Dhruvin Mehta.
+            Made with <FontAwesomeIcon className={styles["heart-icon"]} icon={faHeart} /> by Dhruvin Mehta.
           </p>
         </div>
       </footer>

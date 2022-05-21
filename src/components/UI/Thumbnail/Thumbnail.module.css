@@ -12,7 +12,8 @@
 
 .thumbnail-title {
   display: none;
-  background-color: var(--COLOR-secondary-bg);
+  background-color: var(--COLOR-brand);
+  color: var(--COLOR-banner-text);
   justify-content: center;
   align-items: center;
   width: 100%;

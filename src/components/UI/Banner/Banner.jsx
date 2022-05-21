@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPlayer from "react-player";
 import { Button } from "../Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
@@ -52,6 +51,7 @@ export const Banner = (props) => {
           <img
             src={`https://img.youtube.com/vi/${props.data._id}/maxresdefault.jpg`}
             alt=""
+            className={styles["resp-img"]}
           />
         </div>
         <div className={styles["banner-text"]}>
