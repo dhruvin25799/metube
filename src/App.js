@@ -12,6 +12,7 @@ import { SignUp } from "./pages/SignUp/SignUp";
 import { MyList } from "./pages/MyList/MyList";
 import { ToastContainer } from "react-toastify";
 import { History } from "./pages/History/History";
+import { Page404 } from "./pages/404/Page404";
 
 function App() {
   const { isDark } = useTheme();
@@ -50,6 +51,7 @@ function App() {
               </RequiresAuth>
             }
           />
+          <Route path="*" element={<Page404/>}/>
         </Routes>
         <Footer />
         {modalState.isOpen && <Modal />}

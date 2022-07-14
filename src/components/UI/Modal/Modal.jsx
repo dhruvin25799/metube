@@ -1,6 +1,10 @@
 import styles from "./Modal.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClose, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClose,
+  faThumbsUp,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { useModal } from "../../../context/modal-context";
 import { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
@@ -12,6 +16,7 @@ import { useAuth } from "../../../context/auth-context";
 import { isInList } from "../../../helpers/isInFunctions";
 import { removeFromLiked, removeFromList } from "../../../helpers/deleteData";
 import ReactPlayer from "react-player/youtube";
+import { AddToCustomPlaylist } from "../AddToCustomPlaylist/AddToCustomPlaylist";
 
 export const Modal = () => {
   const { userData, userDataDispatch } = useUserData();
@@ -154,7 +159,7 @@ export const Modal = () => {
         progress: undefined,
       });
     }
-  }
+  };
   return (
     <>
       <div className={`${styles["modal"]} ${isMounted && styles["show"]}`}>
@@ -185,10 +190,12 @@ export const Modal = () => {
         </div>
         <div className={styles["modal-cta"]}>
           {isAlreadyAdded ? (
-            <Button onClick={removeFromListHandler}>Remove from List</Button>
+            <Button onClick={removeFromListHandler}>
+              Remove from watch later
+            </Button>
           ) : (
             <Button primary={true} onClick={addToListHandler}>
-              Add to my List
+              Add to watch later
             </Button>
           )}
           <div className={styles["likes-container"]}>
@@ -203,6 +210,7 @@ export const Modal = () => {
             )}
           </div>
         </div>
+        <AddToCustomPlaylist/>
       </div>
     </>
   );

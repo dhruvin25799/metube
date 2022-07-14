@@ -1,0 +1,24 @@
+.list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.error-text {
+  padding: 2rem;
+}
+
+.custom-playlist-header {
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .list-grid {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}

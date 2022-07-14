@@ -70,7 +70,7 @@ export const Banner = (props) => {
           </Button>
           <Button onClick={sendRequest} disabled={isAlreadyAdded}>
             <FontAwesomeIcon icon={faCircleInfo} />
-            {isAlreadyAdded ? "Already in your list" : "Add to my list"}
+            {isAlreadyAdded ? "Already in watch later" : "Add to watch later"}
           </Button>
         </div>
       </section>

@@ -4,13 +4,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBan } from "@fortawesome/free-solid-svg-icons";
 import { useUserData } from "../../context/userdata-context";
 import { Thumbnail } from "../../components/UI/Thumbnail/Thumbnail";
-import { removeAllHistory } from "../../helpers/deleteData";
+import { removeAllHistory, removeOneVideo } from "../../helpers/deleteData";
 import { useAuth } from "../../context/auth-context";
 import { toast } from "react-toastify";
 
 export const History = () => {
   const { authState } = useAuth();
   const { userData, userDataDispatch } = useUserData();
+  const deleteOneVideoHandler = async (video) => {
+    try {
+      const data = await removeOneVideo({ video, token: authState.token });
+      userDataDispatch({ type: "HISTORY", payload: data.history });
+      toast.success("Video removed from history", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+    } catch (err) {
+      toast.error(err.message, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
   const removeHistoryHandler = async () => {
     try {
       const data = await removeAllHistory({ token: authState.token });
@@ -52,7 +77,11 @@ export const History = () => {
           <div className={styles["history-grid"]}>
             {userData.history.length > 0 ? (
               userData.history.map((item) => (
-                <Thumbnail data={item} key={item._id} />
+                <Thumbnail
+                  data={item}
+                  key={item._id}
+                  onDelete={deleteOneVideoHandler}
+                />
               ))
             ) : (
               <p>Your watch history will appear here.</p>

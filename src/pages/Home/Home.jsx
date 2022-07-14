@@ -16,7 +16,6 @@ export const Home = () => {
       setMovieData(data);
       setBannerData(randomMovie);
       setIsLoading(false);
-      console.log(data);
     })();
   }, []);
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +29,7 @@ export const Home = () => {
         )}
         {!isLoading && <Banner data={bannerData} />}
         {!isLoading && userData.watchlater.length > 0 && (
-          <Carousel data={{ title: "My List", movies: userData.watchlater }} />
+          <Carousel data={{ title: "Watch Later", movies: userData.watchlater }} />
         )}
         {!isLoading && userData.history.length > 0 && (<Carousel data={{title: "Watch Again", movies: userData.history}}/>)}
         {!isLoading &&

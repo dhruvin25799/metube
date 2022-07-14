@@ -1,13 +1,12 @@
+import axios from "axios";
 const getVideos = async () => {
-  const res = await fetch("/api/videos/");
-  const data = await res.json();
-  return data;
+  const res = await axios.get("/api/videos/");
+  return res.data;
 };
 
 const getCategories = async () => {
-  const res = await fetch("/api/categories/");
-  const data = await res.json();
-  return data;
+  const res = await axios.get("/api/categories/");
+  return res.data;
 };
 
 export const getMovieData = async () => {

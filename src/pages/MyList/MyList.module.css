@@ -20,6 +20,44 @@
   gap: 1rem;
 }
 
+.list-form-container{
+  display: flex;
+  flex-flow: column;
+}
+
+.form-header{
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+}
+
+.list-form-container form{
+  padding: 2rem;
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+}
+
+.input-control {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-control input {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 300px;
+  background-color: var(--COLOR-secondary-bg);
+  color: var(--COLOR-text);
+}
+
+.input-control input:focus {
+  outline: none;
+}
+
 @media (max-width: 480px) {
   .list-grid{
     display: flex;

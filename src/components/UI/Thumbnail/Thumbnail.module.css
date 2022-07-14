@@ -31,3 +31,10 @@
   top: 150px;
   z-index: 4;
 }
+
+.thumbnail-container button{
+  background-color: transparent;
+  top: 0px;
+  right: 0;
+  position: absolute;
+}

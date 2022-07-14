@@ -1,17 +1,14 @@
+import axios from "axios";
 export const loginAPICall = async (inputState) => {
   try {
-    const response = await fetch("/api/auth/login", {
-      method: "POST",
-      body: JSON.stringify({
-        email: inputState.email,
-        password: inputState.password,
-      }),
+    const response = await axios.post("/api/auth/login", {
+      email: inputState.email,
+      password: inputState.password,
     });
-    const data = await response.json();
     if (response.status !== 200) {
-      throw new Error(data.errors[0]);
+      throw new Error(response.data.errors[0]);
     }
-    return data;
+    return response.data;
   } catch (err) {
     throw new Error(err);
   }
@@ -19,20 +16,16 @@ export const loginAPICall = async (inputState) => {
 
 export const registerAPICall = async (inputState) => {
   try {
-    const response = await fetch("/api/auth/signup", {
-      method: "POST",
-      body: JSON.stringify({
-        email: inputState.email,
-        password: inputState.password,
-        firstName: inputState.fName,
-        lastName: inputState.lName,
-      }),
+    const response = await axios.post("/api/auth/signup", {
+      email: inputState.email,
+      password: inputState.password,
+      firstName: inputState.fName,
+      lastName: inputState.lName,
     });
-    const data = await response.json();
     if (response.status !== 201) {
-      throw new Error(data.errors[0]);
+      throw new Error(response.data.errors[0]);
     }
-    return data;
+    return response.data;
   } catch (err) {
     throw new Error(err);
   }

@@ -1,0 +1,6 @@
+.add-to-custom-div{
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    padding-left: 2rem;
+}

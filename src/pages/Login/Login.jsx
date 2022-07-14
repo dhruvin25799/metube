@@ -23,7 +23,6 @@ export const Login = () => {
     event.preventDefault();
     try {
       const data = await loginAPICall(loginInputState);
-      console.log(data);
       authStateDispatch({ type: "LOGIN", payload: data.encodedToken });
       userDataDispatch({ type: "LOGIN", payload: data.foundUser });
       navigate("/", { replace: true });
