@@ -9,7 +9,8 @@ To view the website live in action visit\
 [MeTube](https://metube-app.netlify.app/).
 
 
-https://user-images.githubusercontent.com/47236093/169644842-1cf11f59-9954-4410-83d0-031d973008f1.mp4
+https://user-images.githubusercontent.com/47236093/182037854-51a26e8a-aa92-47d7-89b5-1819890343dc.mp4
+
 
 ---
 
@@ -20,8 +21,8 @@ https://user-images.githubusercontent.com/47236093/169644842-1cf11f59-9954-4410-
 * Auth
   * To use this app you will have to login/signup.
   * You can either create an account or use or default one for testing
-  * Email : adarshbalika@gmail.com
-  * Password : adarshBalika123
+  * Email : mailme.sangitamehta@gmail.com
+  * Password : 1234567890
   * The app is made in such a way to not allow you to view any page and redirect to login if not logged in. 
 * Landing Page
   * CTA Banner -> A random CTA banner that updates everytime you visit the home page with a random movie. Has 2 button -> Play Now & Add to List.
@@ -35,6 +36,9 @@ https://user-images.githubusercontent.com/47236093/169644842-1cf11f59-9954-4410-
   * Displays all vidoes added to your list in a carousel.
   * Liked videos are also displayed in a section here.
   * Clicking on any video you can open it's modal and unlike/remove from list.
+  * You can create new lists from the CTA button
+  * Each List will have it's videos and a delete button on it's thumbnail to delete it from the list.
+  * Each list will have a trash can to delete the list and it's contents.
 * History
   * When you start playing a video, it is automatically added to your history and displayed here.
   * History can be completely cleared on clicking the clear history button.
