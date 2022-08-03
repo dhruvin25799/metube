@@ -75,7 +75,15 @@ export const Login = () => {
                 }
               />
             </div>
-            <button className={styles["form-btn"]}>Sign In</button>
+            <div className={styles["form-cta"]}>
+              <button className={styles["form-btn"]}>Sign In</button>
+              <button
+                className={styles["form-btn-secondary"]}
+                onClick={() => loginInputStateDispatch({ type: "DUMMY" })}
+              >
+                Sign In with dummy account
+              </button>
+            </div>
           </form>
           <div className={styles["other-links"]}>
             <Link to="/register">First time? Register Here</Link>

@@ -39,10 +39,29 @@
   outline: none;
 }
 
+.form-cta{
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  gap: 15px;
+}
+
 .form-btn {
-  margin-top: 2rem;
   background-color: var(--COLOR-brand);
   color: var(--COLOR-text);
+}
+
+.form-btn:hover{
+  background-color: var(--COLOR-primary-btn-bg-hover);
+}
+
+.form-btn-secondary{
+  background-color: var(--COLOR-secondary-btn-bg);
+  color: var(--COLOR-secondary-btn-text);
+}
+
+.form-btn-secondary:hover{
+  background-color: var(--COLOR-secondary-btn-bg-hover);
 }
 
 .other-links {
